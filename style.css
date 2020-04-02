@@ -1,0 +1,43 @@
+/* 
+ * style.css
+ * 3/27/2020
+ * By: Ansgar Jordan
+ * Purpose: Stylesheet for Portfolio website
+ *
+
+
+ * {
+ 	font-family: sans-serif;
+ }
+
+ nav {
+ 	position: fixed;
+ 	text-align: center;
+ 	top: 0;
+ 	left: 0;
+ 	width: 100vw;
+ 	height: 9vh;
+ 	background-color: blue;
+ 	font-family: 
+ }
+ .nav-container {
+ 	display:flex;
+ 	justify-content: center;
+ }
+ .nav-sections {
+ 	background-color: lightgray;
+ 	margin: 0;
+ 	padding-left: 2vw;
+ 	padding-right: 2vw;
+ 	padding-bottom: 2vh;
+ 	font-size: 3vh;
+ }
+ .heading{
+ 	margin: auto;
+ 	padding-left: 2vw;
+ 	padding-right: 2vw;
+ 	padding-bottom: 2vh;
+ 	font-size: 4vh;
+ 	text-decoration: underline;
+ }
+ */
