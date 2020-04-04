@@ -15,7 +15,7 @@
 	 * {
  	font-family: Consolas;
  }
-
+/* Nav Sections */
  nav {
  	position: fixed;
  	text-align: center;
@@ -42,6 +42,18 @@
  .nav-sections:hover{
  	text-decoration: underline overline;
  }
+  a:visited{
+ 	text-decoration: none;
+ 	color:none;
+ }
+ a{
+ 	color:rgba(255, 255, 255, .76);;
+ 	 text-decoration: none;
+ }
+
+/* Nav Sections END */
+
+/* Sections - General */
  .heading{
  	text-align: center;
  	padding-left: 2vw;
@@ -51,14 +63,30 @@
  	text-decoration: underline;
  	text-decoration-color: #0066ff;
  }
- a:visited{
- 	text-decoration: none;
- 	color:none;
+section{
+ 	max-height:96vh;
+ 	min-height: 96vh;
+ 	min-width:100vw;
+ 	margin: 0;
+ 	padding:0;
+ 	overflow: hidden;
+ 	position:relative;
+
  }
- a{
- 	color:rgba(255, 255, 255, .76);;
- 	 text-decoration: none;
+ html, body{
+   margin: 0;
+   padding:0;
  }
+ p{
+ 	margin-left: 5vw;
+	margin-right: 5vw;
+	margin-top:2vh;
+	margin-bottom: 2vh;
+	width: 90vw;
+ 	text-align: justify;
+ 	font-size:4vmin;
+ }
+/* End Sections: General */
 
 
  .name {
@@ -66,13 +94,27 @@
  	display: block;
  	margin:auto;
  	position: absolute;
- 	top: 40%;
+ 	top: 40vh;
  	left:40vw;
     transform: translate(-50%, -50%);
  	font-size: 10vmin;
  	/* background-color:rgba(255, 255, 255, .55); */
  	font-family: Courier New;
  }
+ .profession{
+
+ 	text-align: center;
+ 	display: block;
+ 	margin:auto;
+ 	position: absolute;
+ 	top: 55vh;
+ 	left:40vw;
+    transform: translate(-50%, -50%);
+ 	font-size: 7vmin;
+ 	/* background-color:rgba(255, 255, 255, .55); */
+ 	font-family: Courier New;
+ }
+ /* Section 1 */
  .homepage {
 
  	background: 
@@ -92,6 +134,9 @@
     background-size: cover;
  
  }
+ /* END Section 1 */
+
+ /* Color Bar */
   .color-bar{
   	display:flex;
  	text-align: center;
@@ -103,26 +148,99 @@
  	height: 4vh;
  	opacity: .6;
  }
- section{
- 	max-height:96vh;
- 	min-height: 96vh;
- 	min-width:100vw;
- 	margin: 0;
- 	padding:0;
- 	overflow: hidden;
+/* END Color bar */
 
- }
- html, body{
-   margin: 0;
-   padding:0;
- }
- 
+/* Begin Courses */
+.course-list {
+	box-shadow: 1vw 1vh rgba(0, 0, 0, .7);
+}
+#comp-sci{
+	top: 8vh;
+	left:0vw;
+	width: 40vw;
+	height: 22vh;
+	border: .2vmin solid black;
+	margin: 5vmin;
+	padding-left: 2vw;
+ 	padding-right: 2vw;
+ 	padding-bottom: 4vh;
+ 	font-size:2.5vmin;
+ 	position: absolute;
 
 
+}
+#mathematics{
+	position: absolute;
+	top: 8vh;
+	right:0vw;
+	width: 40vw;
+	height: 22vh;
+	border: .2vmin solid black;
+	margin: 5vmin;
+    padding-left: 2vw;
+ 	padding-right: 2vw;
+ 	padding-bottom: 4vh;
+ 	font-size:2.5vmin;
+
+	
+}
+#other{
+	width: 40vw;
+	position: absolute;
+	bottom: 17vh;
+	height: 22vh;
+	border: .2vmin solid black;
+	 margin: 5vmin; 
+	/* left: 30vw; */
+	padding-left: 2vw;
+ 	padding-right: 2vw;
+ 	padding-bottom: 4vh;
+    font-size:2.5vmin;
+}
+/* End Courses */
+
+/* Begin Languages */
+.language-list{
+	margin-left: 5vw;
+	margin-right: 5vw;
+	margin-top:2vh;
+	margin-bottom: 2vh;
+	padding-left: 2vw;
+	padding-right: 2vw;
+	width: 90vw;
+	border: .2vmin solid black;
+	box-shadow: 1vw 1vh rgba(0, 0, 0, .7);
+	display:flex;
+	justify-content: center;
+	/* padding: 2vmin; */
+}
+.language {
+	font-size: 3vmin;
+	margin-left: 3.2vw;
+	margin-right: 3.2vw;
+	margin-top:3vh;
+	margin-bottom: 3vh;
+
+}
+.backtop {
+	color: rgba(0,0,0,.4);
+	justify-content: center;
+	text-align: center;
+	text-decoration: underline;
+	bottom:1vh;
+	position: absolute;
+	width: 8vw;
+	height: 2vh;
+	left: 46vw;
+	font-size: 2vmin;
+
+}
+
+/* End Languages */
 
 	</style>
 <body>
-	<div class="color-bar">
+	<div class="color-bar" id="top">
 	<div class="color-section" style="background-color:#FF6F61"></div>
 	<div class="color-section" style="background-color:#55B4B0"></div>
 	<div class="color-section" style="background-color:#EFC050"></div>
@@ -138,16 +256,20 @@
 			<div class="nav-container">
 
 				    <a href="#about-me"> <div class="nav-sections"> ABOUT ME </div> </a>
-					<a href="#projects"> <div class="nav-sections"> PROJECTS</div> </a>
+				    <a href="#experience"> <div class="nav-sections"> EXPERIENCE </div> </a>
 					<a href="#courses"> <div class="nav-sections"> COURSES </div> </a>
-					<a href="#experience"> <div class="nav-sections"> EXPERIENCE </div> </a>
+					<a href="#projects"> <div class="nav-sections"> PROJECTS</div> </a>
 					<a href="#contact"> <div class="nav-sections"> CONTACT </div> </a>
 			</div>
 	</nav>
 
 <section class="homepage">
 	<img src="sailing.jpg" style="visibility: hidden">
-	<div class="name"> Ansgar Jordan </div>
+	<div class="name"> Ansgar Jordan <br>
+	   </div>
+	<div class="profession">
+	<!--	{ Data Science Engineer }; -->
+	</div>
 </section>
 <div class="color-bar" id="about-me">
 	<div class="color-section" style="background-color:#FF6F61"></div>
@@ -163,36 +285,7 @@
 	</div>
 <section class="about-me"> 
 	<div class="heading"> About Me </div>
-</section>
-<div class="color-bar"  id="projects">
-	<div class="color-section" style="background-color:#FF6F61"></div>
-	<div class="color-section" style="background-color:#55B4B0"></div>
-	<div class="color-section" style="background-color:#EFC050"></div>
-	<div class="color-section" style="background-color:#DD4124"></div>
-	<div class="color-section" style="background-color:#98B4D4"></div>
-	<div class="color-section" style="background-color:#FF6F61"></div>
-	<div class="color-section" style="background-color:#55B4B0"></div>
-	<div class="color-section" style="background-color:#EFC050"></div>
-	<div class="color-section" style="background-color:#DD4124"></div>
-	<div class="color-section" style="background-color:#98B4D4"></div>
-	</div>
-<section class="projects">
-	<div class="heading"> Projects </div>
-	</section>
-	<div class="color-bar" id="courses">
-	<div class="color-section" style="background-color:#FF6F61"></div>
-	<div class="color-section" style="background-color:#55B4B0"></div>
-	<div class="color-section" style="background-color:#EFC050"></div>
-	<div class="color-section" style="background-color:#DD4124"></div>
-	<div class="color-section" style="background-color:#98B4D4"></div>
-	<div class="color-section" style="background-color:#FF6F61"></div>
-	<div class="color-section" style="background-color:#55B4B0"></div>
-	<div class="color-section" style="background-color:#EFC050"></div>
-	<div class="color-section" style="background-color:#DD4124"></div>
-	<div class="color-section" style="background-color:#98B4D4"></div>
-	</div>
-<section class="courses">
-	<div class="heading"> Courses </div>
+	<a href="#top" style="color: rgba(0,0,0,.4);"> <div class="backtop"> back to top</div> </a>
 </section>
 <div class="color-bar" id="experience">
 	<div class="color-section" style="background-color:#FF6F61"></div>
@@ -208,7 +301,81 @@
 	</div>
 <section class="experience">
 	<div class="heading">Experience </div>
+	<div class="language-list">
+		
+		<div class="language"> MySQL </div>
+		<div class="language"> Python </div>
+		<div class="language"> C </div>
+		<div class="language"> C++ </div>
+		<div class="language"> Javascript </div>
+		<div class="language"> HTML </div>
+		<div class="language"> CSS </div>
+	
+	</div>
+	<p>
+			I have the most experience in C/C++, which I use for most major projects. I have intermediate experience writing queries in MySQL and small programs in Python. 
+			I use Javascript, HTML and CSS for web applications. 
+		<p>
+			<a href="#top" style="color: rgba(0,0,0,.4);"> <div class="backtop"> back to top</div> </a>
 </section>
+	<div class="color-bar" id="courses">
+	<div class="color-section" style="background-color:#FF6F61"></div>
+	<div class="color-section" style="background-color:#55B4B0"></div>
+	<div class="color-section" style="background-color:#EFC050"></div>
+	<div class="color-section" style="background-color:#DD4124"></div>
+	<div class="color-section" style="background-color:#98B4D4"></div>
+	<div class="color-section" style="background-color:#FF6F61"></div>
+	<div class="color-section" style="background-color:#55B4B0"></div>
+	<div class="color-section" style="background-color:#EFC050"></div>
+	<div class="color-section" style="background-color:#DD4124"></div>
+	<div class="color-section" style="background-color:#98B4D4"></div>
+	</div>
+<section class="courses">
+	<div class="heading"> Courses </div>
+
+	<div class="course-list" id="comp-sci">
+		<h3>Computer Science</h3>
+		<ul style="list-style-type: none">
+			<li> Data Structures</li>
+			<li> Web Programming</li>
+			<li> Machine Structure & Assembly-Language Programming (Comp40)</li>
+
+		</ul>
+	</div>
+
+	<div class="course-list" id="mathematics">
+		<h3> Mathematics </h3>
+		<ul style="list-style-type: none">
+			<li>Multivariable Calculus</li>
+			<li>Discrete Mathematics</li>
+		</ul>
+	</div>
+	<div class="course-list" id="other">
+		<h3> Other Courses </h3>
+		<ul style="list-style-type: none">
+		<li> Intro to Engineering - Renewable Energy</li>
+		<li> Engineering Management </li>
+		<li> Technical and Managerial Communications  </li>
+	</ul>
+	</div>
+<a href="#top" style="color: rgba(0,0,0,.4);"> <div class="backtop"> back to top</div> </a>
+</section>
+<div class="color-bar"  id="projects">
+	<div class="color-section" style="background-color:#FF6F61"></div>
+	<div class="color-section" style="background-color:#55B4B0"></div>
+	<div class="color-section" style="background-color:#EFC050"></div>
+	<div class="color-section" style="background-color:#DD4124"></div>
+	<div class="color-section" style="background-color:#98B4D4"></div>
+	<div class="color-section" style="background-color:#FF6F61"></div>
+	<div class="color-section" style="background-color:#55B4B0"></div>
+	<div class="color-section" style="background-color:#EFC050"></div>
+	<div class="color-section" style="background-color:#DD4124"></div>
+	<div class="color-section" style="background-color:#98B4D4"></div>
+	</div>
+<section class="projects">
+	<div class="heading"> Projects </div>
+	<a href="#top" style="color: rgba(0,0,0,.4);"> <div class="backtop"> back to top</div> </a>
+	</section>
 <div class="color-bar" id="contact">
 	<div class="color-section" style="background-color:#FF6F61"></div>
 	<div class="color-section" style="background-color:#55B4B0"></div>
@@ -223,6 +390,29 @@
 	</div>
 <section class="contact">
 	<div class="heading">Contact</div>
+	<form method="post" name="contact_form" action="contact-form-handler.php">
+    Your Name:
+    <input type="text" name="name">
+
+    Email Address:
+    <input type="text" name="email">
+
+    Message:
+    <textarea name="message"></textarea>
+
+    <input type="submit" value="Submit">
+</form>	
+
+<!-- Form Validation -->
+<script language="JavaScript">
+var frmvalidator  = new Validator("contactform");
+frmvalidator.addValidation("name","req","Please provide your name");
+frmvalidator.addValidation("email","req","Please provide your email");
+frmvalidator.addValidation("email","email",
+  "Please enter a valid email address");
+</script>
+<!-- end Contact form -->
+	<a href="#top" style="color: rgba(0,0,0,.4);"> <div class="backtop"> back to top</div> </a>
 </section>
 
 </body>
